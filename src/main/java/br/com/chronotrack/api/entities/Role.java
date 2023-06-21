@@ -9,9 +9,9 @@ public enum Role {
     EMPLOYEE(Name.EMPLOYEE);
 
     public static class Name {
-        public static final String ADMIN = "Admin";
-        public static final String LEAD = "Lead";
-        public static final String EMPLOYEE = "Employee";
+        public static final String ADMIN = "ADMIN";
+        public static final String LEAD = "LEAD";
+        public static final String EMPLOYEE = "EMPLOYEE";
     }
 
     private final String description;

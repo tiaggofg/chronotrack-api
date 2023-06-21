@@ -1,5 +1,6 @@
-#Application
+# Application
 *.properties
+*.pem
 
 #Maven
 target/

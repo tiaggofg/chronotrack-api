@@ -1,13 +1,16 @@
 package br.com.chronotrack.api.entities;
 
 import io.quarkus.mongodb.panache.common.MongoEntity;
+import org.bson.codecs.pojo.annotations.BsonId;
 import org.bson.types.ObjectId;
 
 import java.util.List;
+import java.util.Set;
 
 @MongoEntity(collection = "user")
 public class User {
 
+    @BsonId
     private ObjectId id;
     private String name;
     private String lastName;
@@ -18,7 +21,7 @@ public class User {
     private String email;
     private Address address;
     private List<Clock> clocks;
-    private List<Role> roles;
+    private Set<String> roles;
     private int age;
     private double weeklyWorkingHours;
     private double overtimeHours;
@@ -28,7 +31,7 @@ public class User {
     public User() {
     }
 
-    public User(ObjectId id, String name, String lastName, String username, String password, String department, String jobTitle, String email, Address address, List<Clock> clocks, List<Role> roles, int age, double weeklyWorkingHours, double overtimeHours, double hourBalance, double missingHours) {
+    public User(ObjectId id, String name, String lastName, String username, String password, String department, String jobTitle, String email, Address address, List<Clock> clocks, Set<String> roles, int age, double weeklyWorkingHours, double overtimeHours, double hourBalance, double missingHours) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -127,11 +130,11 @@ public class User {
         this.clocks = clocks;
     }
 
-    public List<Role> getRoles() {
+    public Set<String> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Role> roles) {
+    public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
 

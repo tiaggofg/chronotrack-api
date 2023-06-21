@@ -1,14 +1,14 @@
-package br.com.chronotrack.api.Dtos;
+package br.com.chronotrack.api.dtos;
 
-public class AuthRequest {
+public class AuthCredentials {
 
     private String username;
     private String password;
 
-    public AuthRequest() {
+    public AuthCredentials() {
     }
 
-    public AuthRequest(String username, String password) {
+    public AuthCredentials(String username, String password) {
         this.username = username;
         this.password = password;
     }
